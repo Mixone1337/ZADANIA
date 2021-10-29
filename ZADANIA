@@ -1,0 +1,97 @@
+using System;
+
+class Program {
+  public static void Main (string[] args) {
+    Console.Write (" n = ");
+    int n = Convert.ToInt32(Console.ReadLine());
+    int s=0;
+    for (int i=1; i<=n;i++){
+      s+=i;
+    }
+    Console.WriteLine($"Сумма = {s}");
+
+  }
+}
+using System;
+
+class Program {
+  public static void Main (string[] args) {
+    Console.Write (" p = ");
+    int p = Convert.ToInt32(Console.ReadLine());
+    int i=p;
+    int fact=1;
+    do{
+      fact*=i;
+      --i;
+    }
+    while (i>1);
+
+    Console.WriteLine($"{p}! = {fact}");
+
+  }
+}
+using System;
+
+class Program
+{
+    static void Main(string[] args)
+    {
+        Console.Write("n = ");
+        int n = Convert.ToInt32(Console.ReadLine());
+
+        var c = 0;
+        var s= 0;
+        while (n > 0)
+        {
+            if (n % 2 == 0)
+            { 
+                c++;
+                s+= n;
+            }
+
+            n -= 1;
+        }
+
+        Console.WriteLine($"Количество парных {c}; Сумма парных: {s}");
+    }
+}
+
+using System;
+
+class Program
+{
+    static void Main(string[] args)
+    {
+        Console.Write("m = ");
+        int m = Convert.ToInt32(Console.ReadLine());
+
+        for (int i = 0; i <= m; i++)
+        {
+            int j = 0;
+            while (j < i)
+            {
+                Console.Write("*");
+                j++;
+            }          
+
+            Console.WriteLine();
+        }
+    }
+}
+using System;
+
+class Program
+{
+    static void Main(string[] args)
+    {
+        for (int i = 2; i < 7; i++)
+        {
+            Console.WriteLine($"Таблица умножения на {i}");
+            for (int x = 2; x < 10; x++)
+            {
+                Console.WriteLine($"{x} * {i} = {x * i}");
+            }
+            Console.WriteLine();
+        }
+    }
+}
