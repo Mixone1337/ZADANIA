@@ -238,3 +238,17 @@ class Program
     }
   }
 }
+Задачи. 1. Задана последовательность целых чисел. Подсчитать количество элементов, у которых четные соседи.
+using System;
+class Program{
+  static void Main(string[] args){
+    int[] arr=Array.ConvertAll(Console.ReadLine ().Split(' '),s=>int.Parse(s));
+    int counter=0;
+    for (int i=1;i<arr.Length-1;i++){
+      if((arr[i-1]%2==0) && (arr[i+1]%2==0)){
+        counter++;
+      }
+    }   
+  Console.WriteLine(counter);
+  }
+}
