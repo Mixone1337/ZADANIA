@@ -312,3 +312,18 @@ class Program {
     Console.WriteLine(c);
   }
 }
+Задан массив из n целых чисел. Вывести только его положительные элементы, не меняя первоначальный порядок.
+using System;
+
+class Program {
+  static void Main(string[] args) {
+    var n = Convert.ToInt32(Console.ReadLine());
+    var p = Array.ConvertAll(Console.ReadLine().Split(' '), s => int.Parse(s));
+    for (var i = 0; i < n; i++) {
+      if(p[i] > 0) {
+        Console.Write(p[i] + " ");
+      }
+    }
+    Console.ReadLine();
+  }
+}
