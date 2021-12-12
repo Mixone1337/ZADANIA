@@ -296,3 +296,19 @@ class Program{
     Console.WriteLine($"Сумма элементов = {sum}, кол-во элементов = {count}");
   }
 }
+ДЗ. Дан массив из n целых чисел. Определите, сколько в нем элементов, больших двух своих соседей, и выведите количество таких элементов. Крайние элементы списка не учитывать, поскольку у них мало соседей.
+using System;
+
+class Program {
+  static void Main(string[] args) {
+    var n = Convert.ToInt32(Console.ReadLine());
+    var p = Array.ConvertAll(Console.ReadLine().Split(' '), s => int.Parse(s));
+    var c = 0;
+    for (var i = 1; i < n - 1; i++) {
+      if(p[i - 1] < p[i] && p[i + 1] < p[i]) {
+        c++;
+      }
+    }
+    Console.WriteLine(c);
+  }
+}
