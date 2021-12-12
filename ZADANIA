@@ -378,3 +378,28 @@ class Program {
     Console.WriteLine($"Кол-во точек: {c}");
   }
 }
+4 
+В строке заменить букву(а) буквой (о). Подсчитать количество замен. Подсчитать, сколько символов в строке.
+ 
+using System;
+
+class Program {
+  static void Main(string[] args) {
+    string text = Console.ReadLine();
+    int c1 = 0; //счетчик символов
+    int c2 = 0; //счетчик замен
+    for (int i = 0; i < text.Length; i++) {
+      c1++;
+      if (text[i] == 'а') {
+        c2++;
+      }
+    }
+    Console.WriteLine(text.Replace("а", "о"));
+    Console.WriteLine($"Кол-во символов в строке: {c1}, кол-во замен: {c2}");
+  }
+}
+ 5 
+В строке заменить все заглавные буквы строчными. 
+
+ 6 
+Дана строка, заканчивающаяся точкой. Подсчитать, сколько слов в строке.
