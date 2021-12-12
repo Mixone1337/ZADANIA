@@ -329,7 +329,20 @@ class Program {
 }
 1 
 Дана строка, содержащая русскоязычный текст. Найти количество слов, начинающихся с буквы "о".
- 
+using System;
+
+class Program {
+  static void Main(string[] args) {
+    string text = Console.ReadLine();
+    int c = 0;
+    foreach (string word in text.ToLower().Split(" ")) {
+      if (word.StartsWith("о")) {
+        c++;
+      }
+    }
+    Console.WriteLine($"Кол-во слов на букву \"о\": {c}");
+  }
+} 
 2 
 В строке заменить все двоеточия (:) знаком процента (%). Подсчитать количество замен. 
 
